@@ -1,0 +1,13 @@
+DateConversion - > Verileri timestamplerine göre aralýklara bölüp bir float raralýðýna sýkýþtýrýyor
+missingDataDelete - > Yalnýzca 142 eksik renk verisi var, o instancelar siliniyor
+
+labels,features -> obje listeleri, 
+editedData,dataset ->DataFrame listeleri
+
+obje listeleri py editorda görüntülenemediðinden devamlý çevirim yapýyorum, 
+editedData o yüzden debug için kullanýlýyor, sonra silinecek
+
+Imputer objesi eksik verileri belirli bir metoda göre doldurmaya yarýyor
+
+LabelEncoder, string verisini encode edip float'a çeviriyor
+ 

@@ -85,7 +85,7 @@ for i in range(len(features[:])):
     features[i,9] =features[i,9].lower()
     features[i,11] =features[i,11].lower()
 
-from sklearn.preprocessing import LabelEncoder,OneHotEncoder
+from sklearn.preprocessing import LabelEncoder,OneHotEncoder,Normalizer
 labelenc = LabelEncoder()
 
 fitted_cols = features[:,4].reshape(len(features[:] ),1)
@@ -109,3 +109,9 @@ features[:,11] = fitted_cols.reshape(len(features[:] ))
 editedData = pd.DataFrame(features) 
 
 print('String data encoded to int')
+
+
+
+normalizer = Normalizer().fit(features[:,1:])
+result = normalizer.transform(features[:,1:]) 
+print('Values normalized')
